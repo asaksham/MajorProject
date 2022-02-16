@@ -45,12 +45,12 @@ def Izhikevich_Model(_I=10, a=0.02, b=0.2, c=-65, d=8, noise=0.1):
     return V, I
 
 
-def I_values(_I=10, noise=0.1, time=None):
-    I = np.zeros(len(time))
-    noi = np.random.normal(0, noise, 1300)
-    # I[1000:4000] = _I + noi
-    I[200:1500] = _I + noi
-    return I
+# def I_values(_I=10, noise=0.1, time=None):
+#     I = np.zeros(len(time))
+#     noi = np.random.normal(0, noise, 1300)
+#     # I[1000:4000] = _I + noi
+#     I[200:1500] = _I + noi
+#     return I
 
 
 # ==============================================================================#
@@ -89,7 +89,7 @@ def start_IZ_sim():
     plt.legend(loc="upper right")
 
     # add axis labels
-    plt.ylabel("Potential [V]/ Current [A]")
+    plt.ylabel("Potential [V] - Current [A]")
     plt.xlabel("Time [s]")
 
     # define sliders (position, color, inital value, parameter, etc...)

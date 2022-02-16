@@ -47,11 +47,11 @@ def LIF(_I=0.005, gl=0.16, Cm=0.0049, noise=0.00001):
     return V, I
 
 
-def I_values(_I=0.005, noise=0.00001, time=None):
-    I = np.zeros(len(time))
-    noi = np.random.normal(0, noise, 3000)
-    I[1000:4000] = _I + noi
-    return I
+# def I_values(_I=0.005, noise=0.00001, time=None):
+#     I = np.zeros(len(time))
+#     noi = np.random.normal(0, noise, 3000)
+#     I[1000:4000] = _I + noi
+#     return I
 
 
 # ==============================================================================#
@@ -89,7 +89,7 @@ def start_LIF_sim():
     plt.legend(loc="upper right")
 
     # add axis labels
-    plt.ylabel("Potential [V]/ Current [A]")
+    plt.ylabel("Potential [V] - Current [A]")
     plt.xlabel("Time [s]")
 
     # define sliders (position, color, inital value, parameter, etc...)
